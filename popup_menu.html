@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            body{
-                padding: 20px;
-            }
-            input{
-                padding: 5px;
-                margin-bottom: 10px;
-                outline: none;
-                font-size: 18px;
-            }
-            button{
-                border-radius: 4px;
-                padding: 4px 14px;
-                outline: none;
-                cursor: pointer;
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- <input id="input_text" type="text"> -->
-        <h1>Ask me anything!!!</h1>
-        <textarea name="input_text" id="input_text" rows="3" cols="30"></textarea>
-        <button id="btn_gemini">Ask AptiAI</button>
-        <div id="result_text"></div>
-        <script src="popup_menu.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Roboto';
+        }
+        textarea{
+            outline: none;
+        }
+
+        button {
+            border-radius: 4px;
+            padding: 4px 20px;
+            outline: none;
+            cursor: pointer;
+            border: 1px solid black;
+            font-size: 16px;
+            background-color: #008CBA;
+            border: none;
+            color: white;
+        }
+
+        #result_text {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .user-message {
+            color: blue;
+            margin-bottom: 5px;
+        }
+
+        .ai-response {
+            color: green;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apti AI</h1>
+    <textarea rows="10" cols="48" id="input_text" type="text" placeholder="Enter your queries" > </textarea>
+    <button id="btn_gemini">Ask to AptiAI</button>
+    <p id="loading" style="display: none;">Loading...</p>
+    <div id="result_text"></div>
+    <script src="popup_menu.js"></script>
+</body>
 </html>
